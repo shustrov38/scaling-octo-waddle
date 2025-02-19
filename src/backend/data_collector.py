@@ -2,7 +2,7 @@ from common.kafka_producer import KafkaProducer
 
 from common.configuration import (
     TOPIC_RAW_DATA,
-    PRODUCER_CONFIG
+    PRODUCER_CONFIG_1 as PRODUCER_CONFIG
 )
 
 from sklearn.model_selection import KFold

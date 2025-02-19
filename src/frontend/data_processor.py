@@ -3,7 +3,7 @@ from common.kafka_consumer import KafkaConsumer
 
 from common.configuration import (
     TOPIC_RAW_DATA,
-    PRODUCER_CONFIG,
+    PRODUCER_CONFIG_2 as PRODUCER_CONFIG,
     CONSUMER_CONFIG_RAW_DATA,
     TOPIC_DATA,
 )
