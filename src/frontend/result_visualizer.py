@@ -42,11 +42,23 @@ class ResultVisualizer:
         self.logger.info(f"Subscribed to {self.input_topic}")
 
     def _update_visualization(self, quality, raw_data):
-        st.session_state.histogram[quality] += 1
+        labels = {
+            3: 'poor',
+            4: 'fair',
+            5: 'average',
+            6: 'good',
+            7: 'very_good',
+            8: 'excellent',
+            9: 'outstanding'
+        }
+
+        quality_str = labels[quality]
+
+        st.session_state.histogram[quality_str] += 1
         self._update_chart()
         
         if quality >= 6:
-            self._update_good_wine_table(raw_data, quality)
+            self._update_good_wine_table(raw_data, quality_str)
 
     def _update_chart(self):
         df = pd.DataFrame.from_dict(st.session_state.histogram, orient='index')
