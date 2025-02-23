@@ -48,6 +48,15 @@ services:
     networks:
       - kafka-net
 
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka-broker-1
+      - kafka-broker-2
+    ports:
+      - "8000:8000"
 
 networks:
   kafka-net:
