@@ -56,7 +56,9 @@ services:
       - kafka-broker-1
       - kafka-broker-2
     ports:
-      - "8000:8000"
+      - "8501:8501"
+    networks:
+      - kafka-net
 
 networks:
   kafka-net:

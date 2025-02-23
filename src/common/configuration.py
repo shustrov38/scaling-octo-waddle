@@ -1,5 +1,5 @@
-BOOTSTRAP_SERVERS_1 = 'localhost:9095'
-BOOTSTRAP_SERVERS_2 = 'localhost:9096'
+BOOTSTRAP_SERVERS_1 = 'kafka:9097'
+BOOTSTRAP_SERVERS_2 = 'kafka:9098'
 
 TOPIC_RAW_DATA = 'raw_wine_params'
 TOPIC_DATA = 'model_input'
